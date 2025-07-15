@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, sum = 0;
+    
+    // Read array size
+    scanf("%d", &n);
+
+    int arr[n];
+
+    // Read array elements
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Compute sum of squares of positive elements
+    for(i = 0; i < n; i++) {
+        if(arr[i] > 0) {
+            sum += arr[i] * arr[i];
+        }
+    }
+
+    // Output the result
+    printf("%d\n", sum);
+
+    return 0;
+}
