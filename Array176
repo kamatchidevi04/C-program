@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int n, address, found = 0;
+
+    // Read number of buildings
+    scanf("%d", &n);
+
+    int doors[n];  // Array to store door numbers
+
+    // Read door numbers
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &doors[i]);
+    }
+
+    // Read the address to find
+    scanf("%d", &address);
+
+    // Search for the address in the door numbers
+    for (int i = 0; i < n; i++) {
+        if (doors[i] == address) {
+            printf("Door Number is %03d-DN\n", i);  // 3-digit index format
+            found = 1;
+            break;
+        }
+    }
+
+    // If not found, print -1
+    if (!found) {
+        printf("-1\n");
+    }
+
+    return 0;
+}
