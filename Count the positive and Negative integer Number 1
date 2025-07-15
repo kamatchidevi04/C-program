@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, pos_count = 0, neg_count = 0;
+    
+    // Read number of elements
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    // Read elements and count positive/negative
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        if(arr[i] > 0) {
+            pos_count++;
+        } else if(arr[i] < 0) {
+            neg_count++;
+        }
+    }
+    
+    // Print with 2 decimal places
+    printf("Count of Positive Integer is %.2f\n", (float)pos_count);
+    printf("Count of Negative Integer is %.2f\n", (float)neg_count);
+    
+    return 0;
+}
